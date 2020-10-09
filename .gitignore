@@ -1,0 +1,13 @@
+*.DS_Store
+._*
+.env
+.idea/
+.tmp/
+.vscode/
+Desktop.ini
+node_modules/
+npm-debug.log*
+Thumbs.db
+dist.zip
+dist/
+jsdoc/
