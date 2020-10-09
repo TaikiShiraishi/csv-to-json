@@ -1,6 +1,5 @@
 const fs = require('fs');
 const parseSync = require('csv-parse/lib/sync');
-const path = require('path');
 
 const parseOptions = {
   bom: true,
@@ -17,8 +16,8 @@ const parseOptions = {
 };
 
 function preferences() {
-  const sizesCsv = fs.readFileSync('./item.csv', 'utf-8');
-  return parseSync(sizesCsv, parseOptions);
+  const csv = fs.readFileSync('./item.csv', 'utf-8');
+  return parseSync(csv, parseOptions);
 }
 
 fs.writeFileSync('preferences.json', JSON.stringify(preferences()));
